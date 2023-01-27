@@ -1,9 +1,14 @@
+# Importing random module to generate random integer
 import random
 
+
+# Initially assigning zero to count veriables  
 count_rock=0
 count_paper=0
 count_scissors=0
 
+
+# Creating a update_counts function
 def update_counts(user_input):
 
   global count_paper, count_rock, count_scissors
@@ -19,7 +24,8 @@ def update_counts(user_input):
   else:
 
     count_scissors += 1
-    
+
+# Creating predict function to predict the users input 
 def predict():
 
   if count_rock > count_paper and count_rock > count_scissors:
@@ -40,11 +46,11 @@ def predict():
 
   return pred
 
+# Initially assigning zero to player_score and computer score veriables
 player_score=0
 comp_score=0
-print("\nPlacing the newline character before the string.")
-print("Placing the newline character before the string.\n")
 
+#Creating update score funtion to update the score of computer and user
 def update_scores(user_input):
 
   global player_score, comp_score
@@ -120,9 +126,12 @@ def update_scores(user_input):
       player_score += 1
 
       print("\nComputer Score: ", comp_score, "\nYour Score: ", player_score)
+      
+# Valid entries that player has to enter 
 
 valid_entries = ['0', '1', '2']
 
+# Running while loop for infinite time 
 while True:
 
   user_input = input("Enter 0 for ROCK, 1 for PAPER and 2 for SCISSORS: ")
